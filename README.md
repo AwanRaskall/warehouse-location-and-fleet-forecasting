@@ -20,27 +20,27 @@ The pipeline consists of the following stages:
 Data -> Clustering -> Capacity check -> Reassignment -> Hub formation -> Depot assignment -> Route optimization
 
 1. **Clustering**
-Applied KMeans to group delivery points based on spatial proximity.
-Number of clusters determined from total demand and vehicle capacity.
+    - Applied KMeans to group delivery points based on spatial proximity.
+    - Number of clusters determined from total demand and vehicle capacity.
 
 2. **Capacity constraint handling**
-Identified overloaded clusters
-Reassigned delivery points between clusters within the same hub
-Created new clusters when necessary
+    - Identified overloaded clusters
+    - Reassigned delivery points between clusters within the same hub
+    - Created new clusters when necessary
 
 3. **Hub formation**
-Clusters are grouped into hubs (delivery regions)
-Enables localized optimization and scalability
+    - Clusters are grouped into hubs (delivery regions)
+    - Enables localized optimization and scalability
 
 4. **Depot placement**
-Introduced a multi-depot strategy
-Depots positioned using centroid-based approximation
-Hubs assigned to the nearest depot
+    - Introduced a multi-depot strategy
+    - Depots positioned using centroid-based approximation
+    - Hubs assigned to the nearest depot
 
 5. **Route optimization**
-Solved Traveling Salesman Problem (TSP) for each cluster
-Implemented a Genetic Algorithm
-Objective: minimize total route distance
+    - Solved Traveling Salesman Problem (TSP) for each cluster
+    - Implemented a Genetic Algorithm
+    - Objective: minimize total route distance
 
 ---
 
@@ -94,6 +94,8 @@ Generated:
     - capacity
     - route smoothness
 4. Replace GA with advanced heuristics
+
+---
 
 ## 💡 Key Insight
 This project can be viewed as a simplified implementation of a multi-depot Vehicle Routing Problem (VRP) with capacity constraints and heuristic optimization.
